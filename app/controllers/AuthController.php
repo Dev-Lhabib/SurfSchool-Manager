@@ -102,8 +102,10 @@ $auth = new AuthController();
 $action = $_GET['action'] ?? '';
 if ($action === 'login') {
     $auth->login();
-} else {
+} elseif ($action === 'register') {
     $auth->register();
+} else {
+    echo "Invalid action";
 }
 
 
